@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Conto</string>
+
+
+    <string name="discount_description_percentage">"Desconto de: %1$s %!"</string>
+
+    <string name="str_codigo">Código</string>
+    <string name="text_details_rule_1">1. Apresentar o código no momento do pagamento</string>
+    <string name="text_details_rules_2">2. Esse código só poderá ser usado uma vez</string>
+    <string name="menu_item_favorite">favorite</string>
+    <string name="menu_item_favorite_description">Heart, used to representate if a discount is a favorite one</string>
+
+    <string name="open_drawer">Abrir menu de navegação</string>
+    <string name="close_drawer">Fechar menu de navegação</string>
+    <string name="str_menu_profile">Meu perfil</string>
+    <string name="str_menu_favorites">Favoritos</string>
+    <string name="str_menu_notifications">Notificações</string>
+    <string name="str_menu_used_offers">Ofertas utilizadas</string>
+    <string name="str_nav_header_user">Usuário</string>
+    <string name="str_nav_header_email">usuario@email.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_image_discount_description">Imagem referente ao desconto ativo</string>
+
+
+</resources>

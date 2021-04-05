@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/favorite"
+        android:contentDescription="@string/menu_item_favorite_description"
+        android:icon="@drawable/ic_favorite_inactive_24dp"
+        android:title="@string/menu_item_favorite"
+        android:onClick="onOptionsItemSelected"
+        app:showAsAction="always" />
+
+
+</menu>

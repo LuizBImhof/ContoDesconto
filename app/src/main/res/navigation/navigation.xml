@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/foodTypeFragment">
+    <fragment
+        android:id="@+id/foodTypeFragment"
+        android:name="com.unidavi.tc.conto.main.FoodTypeFragment"
+        android:label="FoodTypeFragment">
+        <action
+            android:id="@+id/action_foodTypeFragment_to_discountActivity"
+            app:destination="@id/discountActivity" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/entertainmentTypeFragment"
+        android:name="com.unidavi.tc.conto.main.EntertainmentTypeFragment"
+        android:label="EntertainmentTypeFragment">
+        <action
+            android:id="@+id/action_entertainmentTypeFragment_to_discountActivity"
+            app:destination="@id/discountActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/discountActivity"
+        android:name="com.unidavi.tc.conto.discount.DiscountActivity"
+        android:label="fragment_discount"
+        tools:layout="@layout/fragment_discount" >
+        <argument
+            android:name="discountKey"
+            app:argType="long" />
+    </activity>
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".discount.DiscountActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        app:liftOnScroll="true">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar_discount"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/establishment_image_placeholder"
+            app:menu="@menu/top_app_bar_establishment"
+            app:navigationIcon="@drawable/ic_back"
+
+            app:titleMarginTop="130dp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/orange"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/gray" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar_discount" />
+
+
+</RelativeLayout>

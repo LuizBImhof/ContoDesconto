@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:id="@+id/group_item_profile">
+        <item android:id="@+id/nav_item_profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="@string/str_menu_profile"
+            android:fontFamily="@font/roboto"
+            android:textColor= "@color/gray"
+            android:textSize = "14sp"/>
+
+    </group>
+    <group android:id="@+id/group_item_favorites">
+        <item android:id="@+id/nav_item_favorites"
+            android:icon="@drawable/ic_menu_favorite"
+            android:title="@string/str_menu_favorites"
+            android:fontFamily="@font/roboto"
+            android:textColor= "@color/gray"
+            android:textSize = "14sp"/>
+
+    </group>
+    <group android:id="@+id/group_item_notifications">
+        <item android:id="@+id/nav_item_notifications"
+            android:icon="@drawable/ic_menu_notification"
+            android:title="@string/str_menu_notifications"
+            android:fontFamily="@font/roboto"
+            android:textColor= "@color/gray"
+            android:textSize = "14sp"/>
+    </group>
+    <group android:id="@+id/group_item_used_offers">
+        <item android:id="@+id/nav_item_used_offers"
+            android:icon="@drawable/ic_menu_used_offers"
+            android:title="@string/str_menu_used_offers"
+            android:fontFamily="@font/roboto"
+            android:textColor= "@color/gray"
+            android:textSize = "14sp"/>
+    </group>
+
+
+
+</menu>

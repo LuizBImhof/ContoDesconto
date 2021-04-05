@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="discount"
+            type="com.unidavi.tc.conto.database.Discount" />
+
+        <variable
+            name="clickListener"
+            type="com.unidavi.tc.conto.adapters.DiscountListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:onClick="@{() -> clickListener.onClick(discount)}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_discount"
+                android:layout_width="124dp"
+                android:layout_height="71dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/discount_image_placeholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/str_image_discount_description" />
+
+            <TextView
+                android:id="@+id/text_discount_establishment_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:discountEstablishmentName="@{discount}"
+                app:layout_constraintEnd_toStartOf="@+id/imageView_discount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Dengo Bistrô" />
+
+            <TextView
+                android:id="@+id/text_discount_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                app:discountDescription="@{discount}"
+                app:layout_constraintBottom_toTopOf="@+id/text_active_until"
+                app:layout_constraintEnd_toEndOf="@+id/text_discount_establishment_name"
+                app:layout_constraintStart_toStartOf="@+id/text_discount_establishment_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_discount_establishment_name"
+                app:layout_constraintVertical_bias="0.100000024"
+                tools:text="10% de desconto em qualquer entrada do cardápio" />
+
+            <TextView
+                android:id="@+id/text_active_until"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textSize="12sp"
+                app:discountActiveUntil="@{discount}"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_discount"
+                app:layout_constraintEnd_toStartOf="@+id/imageView_discount"
+                app:layout_constraintStart_toStartOf="@+id/text_discount_description"
+                tools:text="Válido até 22/03/2020" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
